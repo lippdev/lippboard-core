@@ -1,0 +1,20 @@
+{
+  "name": "@lippdev/lippboard-core",
+  "version": "0.1.0",
+  "description": "Framework-agnostic productivity domain and use cases extracted from Lipp Board.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./domain": "./src/domain/appState.js",
+    "./tasks": "./src/use-cases/taskLifecycle.js",
+    "./notes": "./src/use-cases/noteLifecycle.js",
+    "./productivity": "./src/use-cases/productivity.js",
+    "./quick-capture": "./src/use-cases/quickCapture.js",
+    "./mind-maps": "./src/use-cases/mindMapLifecycle.js"
+  },
+  "scripts": {
+    "test": "node test/core.test.mjs",
+    "audit:public": "node scripts/audit-public.mjs"
+  },
+  "files": ["src", "README.md", "LICENSE"]
+}
