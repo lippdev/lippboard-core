@@ -31,7 +31,7 @@ async function walk(dir, prefix = '') {
 const files = await walk(root);
 for (const file of files) {
   const top = file.split(path.sep)[0];
-  if (!allowed.has(file) && !['src', 'test', 'scripts', '.github'].includes(top)) {
+  if (!allowed.has(file) && !['src', 'test', 'scripts', 'docs', 'showcase', '.github'].includes(top)) {
     throw new Error(`Arquivo fora da allowlist pública: ${file}`);
   }
   if (file === 'scripts/audit-public.mjs') continue;

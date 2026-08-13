@@ -13,7 +13,7 @@
     "./mind-maps": "./src/use-cases/mindMapLifecycle.js"
   },
   "scripts": {
-    "test": "node test/core.test.mjs",
+    "test": "node test/core.test.mjs && node test/showcase.test.mjs",
     "audit:public": "node scripts/audit-public.mjs"
   },
   "files": ["src", "README.md", "LICENSE"]

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Interactive showcase for Lipp Board Core — framework-agnostic productivity domain rules." />
+  <title>Lipp Board Core · Domain showcase</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <div>
+        <p class="kicker">OPEN-SOURCE DOMAIN ENGINE</p>
+        <h1>Lipp Board<br /><span>Core</span></h1>
+        <p class="lede">Productivity rules that do not know — or care — whether the UI is React, React Native, or a terminal.</p>
+      </div>
+      <aside class="proof" aria-label="Project facts">
+        <strong>0</strong><span>runtime dependencies</span>
+        <strong>6</strong><span>focused module exports</span>
+        <strong>2</strong><span>target clients: web + native</span>
+      </aside>
+    </header>
+
+    <section class="architecture" aria-label="Architecture">
+      <span>React / Expo / Node</span><i>→</i><b>use cases</b><i>→</i><b>domain</b><i>→</i><span>your adapter</span>
+    </section>
+
+    <section class="workspace">
+      <div class="panel panel--tasks">
+        <div class="panel__head"><div><p>LIVE DOMAIN STATE</p><h2>Today</h2></div><span id="progress">0%</span></div>
+        <form id="task-form">
+          <label for="task-title" class="sr-only">Task title</label>
+          <input id="task-title" autocomplete="off" placeholder="Add a task to the immutable state…" required />
+          <button>Add</button>
+        </form>
+        <div id="task-list" class="task-list" aria-live="polite"></div>
+      </div>
+
+      <div class="panel panel--event">
+        <div class="panel__head"><div><p>TRANSITION LOG</p><h2>Pure in. New state out.</h2></div></div>
+        <pre id="event-log" tabindex="0"></pre>
+      </div>
+    </section>
+
+    <section class="capabilities">
+      <article><span>01</span><h3>Task lifecycle</h3><p>Create, normalize, prioritize, filter, complete, and delete without UI coupling.</p></article>
+      <article><span>02</span><h3>Knowledge capture</h3><p>Notes, search, mood capture, and bilateral mind-map mutations.</p></article>
+      <article><span>03</span><h3>Safe extraction</h3><p>Allowlist releases, clean history, Gitleaks, and explicit private-boundary checks.</p></article>
+    </section>
+
+    <footer><p>Built by <a href="https://github.com/lippdev">Filipe Moreira</a></p><a href="https://github.com/lippdev/lippboard-core">View source ↗</a></footer>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
